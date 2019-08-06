@@ -1,5 +1,5 @@
 title        = "My OSS Foundation"
-baseURL      = "https://my-foundation.org"
+baseURL      = "https://foundation-starter-kit.netlify.com"
 languageCode = "en-us"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
