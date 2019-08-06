@@ -80,3 +80,8 @@ parent = "members"
 name = "FAQ"
 url = "/faq"
 weight = 4
+
+[[menu.main]]
+name = "News"
+url = "/news"
+weight = 5

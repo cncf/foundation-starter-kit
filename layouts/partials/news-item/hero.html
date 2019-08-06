@@ -1,25 +1,17 @@
 {{ $title  := .Title }}
 {{ $author := .Params.author }}
 {{ $date   := .Date | dateFormat "January 2, 2006" }}
-{{ $type   := .Params.type }}
-{{ $types  := (dict "announcements" "Announcement" "in-the-news" "In The News") }}
-{{ $dType  := index $types $type }}
-<section class="hero">
+<section class="hero is-primary is-medium">
   <div class="hero-body">
     <div class="container">
-      <p class="title is-size-1 is-size-2-mobile has-text-weight-light">
+      <p class="title is-size-1 is-size-2-mobile has-text-weight-light is-spaced">
         {{ $title }}
       </p>
-    </div>
-  </div>
 
-  <div class="hero-foot">
-    <div class="container">
-      <p class="has-text-weight-light">
-        By {{ $author }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ $date }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ $dType }}
+      <p class="subtitle">
+        {{ with $date }}<span class="has-text-weight-light">{{ . }}</span>{{ end }}{{ if and $date $author }}&nbsp;&nbsp;&nbsp;<i class="fas fa-ellipsis-v"></i>&nbsp;&nbsp;&nbsp;{{ end }}
+        {{ with $author }}<span class="has-text-weight-bold">{{ . }}</span>{{ end }}
       </p>
-
-      <hr />
     </div>
   </div>
 </section>

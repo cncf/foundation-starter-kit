@@ -4,9 +4,8 @@
 
 {{ define "main" }}
 {{ $currentSection := .CurrentSection.Title }}
-{{ $itemType       := $currentSection | urlize }}
 {{ $isRoot         := eq $currentSection .FirstSection.Title }}
-{{ $items          := cond $isRoot (where site.RegularPages "Section" "news") (where site.RegularPages ".Params.type" $itemType) }}
+{{ $items          := where site.RegularPages "Section" "news" }}
 
 {{ partial "hero.html" . }}
 
@@ -14,17 +13,16 @@
   <div class="container">
     <div class="content doc-section">
       {{ range $items }}
-      {{ $date := .Date | dateFormat "January 2, 2006" }}
-      {{ $itemType := .Params.type }}
-      {{ $display := (dict "announcements" "Announcement" "in-the-news" "In The News") }}
-      {{ $type := index $display $itemType }}
+      {{ $author := .Params.author }}
+      {{ $date   := .Date | dateFormat "January 2, 2006" }}
       <div class="news-item">
-        <p class="news-item-header has-text-weight-light">
-          {{ $date }} in {{ $type }}
-        </p>
-
         <p class="news-item-title has-text-weight-light" href="{{ .RelPermalink }}">
           {{ .Title }}
+        </p>
+
+        <p>
+          {{ with $date }}<span class="has-text-weight-light">{{ . }}</span>{{ end }}{{ if and $date $author }}&nbsp;&nbsp;&nbsp;<i class="fas fa-ellipsis-v"></i>&nbsp;&nbsp;&nbsp;{{ end }}
+          {{ with $author }}<span class="has-text-weight-bold">{{ . }}</span>{{ end }}
         </p>
 
         <p class="news-item-summary">
