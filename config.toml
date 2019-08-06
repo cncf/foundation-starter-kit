@@ -46,9 +46,15 @@ sizes = [300, 400, 600, 700]
 type = "sans_serif"
 
 [[menu.main]]
+identifier = "about"
 name = "About"
 url = "/about"
 weight = 1
+
+[[menu.main]]
+name = "FAQ"
+url = "/faq"
+parent = "about"
 
 [[menu.main]]
 name = "Members"
