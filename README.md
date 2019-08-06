@@ -17,6 +17,12 @@ git clone https://github.com/cncf/foundation-starter-kit
 cd foundation-starter-kit
 ```
 
+Install the necessary assets:
+
+```bash
+make setup
+```
+
 Now you can run the site locally:
 
 ```bash

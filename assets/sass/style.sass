@@ -1,0 +1,111 @@
+{{ $colors             := site.Params.colors }}
+{{ $primary            := $colors.primary | default "#426cab" }}
+{{ $secondary          := $colors.secondary | default "#76c5d5" }}
+{{- $fonts    := site.Params.fonts }}
+{{- $fontSlice := (slice) }}
+{{- range $fonts }}
+{{- $fontSlice = $fontSlice | append (printf "%s:%s" (replace .name " " "+") (delimit .sizes ",")) }}
+{{- end }}
+{{- $fontsUrl := printf "https://fonts.googleapis.com/css?family=%s" (delimit $fontSlice "|") }}
+{{- $sansSerifFont := (index (where site.Params.fonts ".type" "sans_serif") 0).name }}
+{{- $monospaceFont := (index (where site.Params.fonts ".type" "monospace") 0).name }}
+{{- $fontAwesomeVersion := site.Params.font_awesome_version }}
+{{- $fontAwesomeUrl := printf "https://use.fontawesome.com/releases/v%s/css/all.css" $fontAwesomeVersion }}
+@charset "utf-8"
+
+@import url({{ $fontsUrl }})
+@import url({{ $fontAwesomeUrl }})
+
+@import "bulma/sass/utilities/initial-variables"
+@import "bulma/sass/utilities/functions"
+
+$primary: {{ $primary }}
+$secondary: {{ $secondary }}
+
+$link: $secondary
+$link-weight: 700
+
+$family-sans-serif: "{{ $sansSerifFont }}", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+$body-size: 16px
+$navbar-height: 4.5rem
+$navbar-item-img-max-height: $navbar-height * 0.5
+$navbar-burger-color: $primary
+$navbar-dropdown-border-top: 1px solid $grey-light
+$section-padding: 3rem 1.5rem
+
+.bottom-padding
+  padding-bottom: 8rem
+
+.body
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+  .main
+    flex: 1
+
+@import "bulma/sass/utilities/derived-variables"
+
+@import "bulma/bulma"
+
+@import "footer"
+
+.content
+  +tablet
+    width: 80%
+    font-size: 18px
+
+  +mobile
+
+  a
+    font-weight: 600
+
+.pricing-table
+  width: 50%
+
+.member-logos
+  margin-top: 4rem
+
+  .member-logo
+    +desktop
+      img
+        width: 75%
+        margin-bottom: 1rem
+    +mobile
+      img
+        width: 50%
+
+.read-more
+  margin-top: 5rem
+
+.news-item
+  &-header
+    
+  &-title
+    font-size: 1.5rem
+
+  & + &
+    margin-top: 3rem
+
+=overlay
+  background-color: rgba(221,23,151,.75)
+
+hr.home
+  height: 1px
+  margin: 0 auto
+  background-color: $primary
+  width: 50%
+
+
+.is-hero-logo
+  +mobile
+    width: 70%
+    margin-bottom: 1.5rem
+  +tablet
+    width: 40%
+    margin-bottom: 3rem
+
+.is-faq-content
+  .faq
+    & + .faq
+      margin-top: 2rem

@@ -1,0 +1,76 @@
+title        = "My OSS Foundation"
+baseURL      = "https://my-foundation.org"
+languageCode = "en-us"
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[params]
+font_awesome_version = "5.10.1"
+description = "A foundation supporting good software"
+copyright = "All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our [Trademark Usage](https://www.linuxfoundation.org/trademark-usage) page. Linux is a registered trademark of Linus Torvalds. [Privacy Policy](http://www.linuxfoundation.org/privacy) and [Terms of Use](http://www.linuxfoundation.org/terms). "
+github_repo = "https://github.com/my-foundation/my-foundation"
+
+[params.colors]
+primary = '#426cab'
+secondary = '#76c5d5'
+
+[params.logos]
+navbar = "cncf-white.png"
+hero   = "cncf-stacked-color.png"
+footer = "cncf-icon-white.png"
+
+[[params.info.columns]]
+title = "What does my foundation do?"
+content = """
+This is just a placeholder.
+"""
+
+[[params.info.columns]]
+title = "How can I help?"
+content = """
+This is another placeholder.
+"""
+
+[params.explanation]
+columns = [
+"""
+Placeholder text 1.
+""",
+"""
+Placeholder text 2.
+"""
+]
+
+[[params.fonts]]
+name = "Nunito Sans"
+sizes = [300, 400, 600, 700]
+type = "sans_serif"
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 1
+
+[[menu.main]]
+name = "Members"
+identifier = "members"
+weight = 2
+
+[[menu.main]]
+name = "Projects"
+url = "/projects"
+weight = 3
+
+[[menu.main]]
+name = "Current members"
+url = "/members"
+parent = "members"
+
+[[menu.main]]
+name = "Join"
+url = "/join"
+parent = "members"
+
+[[menu.main]]
+name = "FAQ"
+url = "/faq"
+weight = 4

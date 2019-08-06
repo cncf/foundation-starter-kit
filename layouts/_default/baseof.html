@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode }}">
+  <head>
+    {{ partial "meta.html" . }}
+    <title>{{ block "title" . }}{{ site.Title }}{{ end }}</title>
+    {{ partial "css.html" . }}
+  </head>
+  <body class="body has-navbar-fixed-top">
+    <div class="main">
+      {{ partial "navbar.html" . }}
+
+      {{ block "main" . }}
+      {{ end }}
+    </div>
+
+    {{ partial "footer.html" . }}
+
+    {{ partial "javascript.html" . }}
+  </body>
+</html>
