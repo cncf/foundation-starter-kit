@@ -1,7 +1,7 @@
 ---
 title: Announcing My Foundation!
 layout: news-item
-date: 2019-11-02
+date: 2019-08-02
 author: Foundy McFoundationface
 ---
 
