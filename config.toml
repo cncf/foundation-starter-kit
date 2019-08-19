@@ -21,26 +21,34 @@ footer = "cncf-icon-white.png"
 [[params.info.columns]]
 title = "What does my foundation do?"
 content = """
-This is just a placeholder.
+Dolor cupidatat tempor sint nulla ex esse irure sit commodo. Eiusmod irure reprehenderit commodo velit laborum consectetur in dolor non id sit culpa. Consectetur quis excepteur sint aliqua cupidatat. Occaecat non excepteur adipisicing excepteur eu est adipisicing fugiat eiusmod ut.
 """
 
 [[params.info.columns]]
 title = "How can I help?"
 content = """
-This is another placeholder.
+Sit deserunt do proident magna tempor non dolore. Cupidatat nulla eiusmod esse proident id duis commodo ad non. Ipsum in est esse ad exercitation minim ea occaecat laborum cupidatat est sit nisi cupidatat. Quis culpa dolore elit duis sint. Nisi duis nulla irure qui sit. Proident dolor adipisicing sit ex.
+
+Nulla culpa mollit adipisicing magna tempor ut non tempor cillum occaecat. Exercitation in veniam ullamco duis ullamco ut ea ex duis nostrud velit. Adipisicing enim et ut pariatur magna. Nulla quis labore fugiat incididunt anim dolor elit aute exercitation anim.
 """
 
 [params.explanation]
 columns = [
 """
-Placeholder text 1.
+Sunt aliquip elit ex sit excepteur fugiat magna consectetur dolore in nulla cillum. Qui consequat aliqua id veniam ea. Velit reprehenderit nisi quis labore nulla. Aute ut dolor incididunt pariatur tempor aliquip exercitation veniam eu officia magna. Elit duis amet minim non. Qui deserunt commodo fugiat proident cupidatat. Nisi dolore in quis sit officia cupidatat non tempor commodo aute ad.
+
+Minim id sit aliqua veniam excepteur sunt ipsum pariatur laboris in sint excepteur ullamco. Ea magna magna magna proident nulla proident proident elit laborum esse. Pariatur exercitation ipsum enim et voluptate incididunt est aliquip laboris pariatur. Dolor aliquip adipisicing dolore pariatur enim labore ad velit veniam. Dolore exercitation sint occaecat quis esse do duis ea incididunt consequat ad eiusmod anim. Adipisicing incididunt laboris excepteur id esse cupidatat ipsum laboris.
+
+Do duis aliqua laborum elit aute dolor tempor aute. Aliqua irure consectetur quis aute commodo. Occaecat sit incididunt pariatur qui aute reprehenderit anim occaecat pariatur est nulla. Ad mollit in mollit ipsum excepteur nisi. Ea occaecat anim labore eu dolor. Lorem velit consequat do anim ut commodo amet aliquip est esse aliqua non veniam consectetur. Irure in pariatur magna in ea exercitation dolor.
 """,
 """
-Placeholder text 2.
+Est commodo ea adipisicing amet adipisicing laboris ad et aute labore. Lorem incididunt minim enim ex elit deserunt velit. Eu id non cupidatat commodo laboris irure laboris commodo laborum nulla velit fugiat proident eiusmod. Officia est do proident deserunt reprehenderit nisi in ad. Veniam nulla ullamco eiusmod commodo consectetur incididunt do culpa ipsum officia qui aliquip elit. Est do laborum et magna eu in consectetur.
+
+Cupidatat ut ea laborum do aliqua qui occaecat eu nisi dolore laboris in in cillum. Laboris officia enim quis laborum velit dolore consequat id cupidatat commodo qui veniam officia dolor. Pariatur non Lorem amet ut non labore nisi officia irure in nulla dolor ipsum.
 """
 ]
 
-[[params.fonts]]
+[params.font]
 name = "Nunito Sans"
 sizes = [300, 400, 600, 700]
 type = "sans_serif"

@@ -42,8 +42,9 @@
         {{ end }}
         {{ end }}
 
+        {{ with $github }}
         <div class="navbar-item">
-          <a class="button is-black" href="{{ $github }}" target="_blank">
+          <a class="button is-black" href="{{ . }}" target="_blank">
             <span class="icon">
               <i class="fab fa-github"></i>
             </span>
@@ -52,6 +53,7 @@
             </span>
           </a>
         </div>
+        {{ end }}
       </div>
     </div>
   </div>
